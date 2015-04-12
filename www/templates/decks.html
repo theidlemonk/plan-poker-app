@@ -1,13 +1,10 @@
 <ion-view view-title="Decks" class="decks-page">
-  <ion-content scroll="false">
-<h1>Decks</h1>
-<h1>All of em</h1>
-    <!-- <ion-list>
-      <ion-item ng-repeat="deck in decks" class="item-avatar">
-        <h2>{{ deck.name }}</h2>
-      </ion-item>
-    </ion-list> -->
-    
-
-  </ion-content>
+    <ion-content padding="true">
+        <h4>Tap a deck to see the cards</h4>
+        <div ng-repeat="deck in decks" >
+            <button class="button button-large button-block button-royal">
+                {{ deck.name }}
+            </button>
+        </div>
+    </ion-content>
 </ion-view>

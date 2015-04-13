@@ -2,9 +2,7 @@
     <ion-content padding="true">
         <h4>{{ decks[url_id].title }} </h4>
         <div ng-repeat="card in decks[url_id].cards" >
-            <a class="button button-block button-royal" >
-                {{ card }}
-            </a>
+            <button class="button icon button-royal">{{ card }}</button>
         </div>
     </ion-content>
 </ion-view>

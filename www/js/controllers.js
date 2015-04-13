@@ -6,7 +6,7 @@ angular.module('plan-poker.controllers', ['ionic', 'plan-poker.services'])
     $scope.decks = [{
         id: 0,
         title: "Fibonacci",
-        cards: ["1", "2", "3", "4"]
+        cards: ["1", "2", "3", "5", "8","13","20","40","100"]
     }, {
         id: 1,
         title: "Tshirt Sizes",

@@ -42,3 +42,8 @@
     -ms-flex-align: center;
     align-items: center;
 }
+
+.decksDetail-page a {
+  float: left;
+  margin: 20px;
+}

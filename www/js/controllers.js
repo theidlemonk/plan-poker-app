@@ -1,27 +1,21 @@
 angular.module('plan-poker.controllers', ['ionic', 'plan-poker.services'])
 
-.controller('TabsCtrl', function($scope){
-  
+.controller('DecksCtrl', function($scope, $location, $stateParams) {
+    $scope.url_id = $stateParams.id;
+    var chosenDeck = ""
+    $scope.decks = [{
+        id: 0,
+        title: "Fibonacci",
+        cards: ["1", "2", "3", "4"]
+    }, {
+        id: 1,
+        title: "Tshirt Sizes",
+        cards: ["S", "M", "L"]
+    }]
+
 })
 
 
-.controller('DecksCtrl', function($scope){
+.controller('AboutCtrl', function($scope) {
 
-  $scope.decks = [
-  {
-    "name":"Fibonacci"
-  },
-  {
-    "name":"Tshirt Sizes"
-  }
-  ]
-  
-})
-
-// .controller('DeckDetailCtrl', function($scope){
-  
-// });
-
-.controller('AboutCtrl', function($scope){
-  
 })

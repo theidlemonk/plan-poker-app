@@ -1,0 +1,10 @@
+<ion-view view-title="Deck Details" class="decksDetail-page">
+    <ion-content padding="true">
+        <h4>{{ decks[url_id].title }} </h4>
+        <div ng-repeat="card in decks[url_id].cards" >
+            <a class="button button-block button-royal" >
+                {{ card }}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

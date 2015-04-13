@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('plan-poker', ['ionic','plan-poker.controllers'])
+angular.module('plan-poker', ['ionic', 'plan-poker.controllers'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -19,35 +19,27 @@ angular.module('plan-poker', ['ionic','plan-poker.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
+    $stateProvider
 
-  .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html',
-    controller: 'TabsCtrl'
-  })
-
-  .state('tab.decks', {
-    url: '/decks',
-    views: {
-      'tab-decks': {
+    .state('decks', {
+        url: '/decks',
         templateUrl: 'templates/decks.html',
         controller: 'DecksCtrl'
-      }
-    }
-  })
+    })
 
-  .state('tab.about', {
-    url: '/about',
-    views: {
-      'tab-about': {
+    .state('about', {
+        url: '/about',
         templateUrl: 'templates/about.html',
         controller: 'AboutCtrl'
-      }
-    }
-  })
+    })
 
-  $urlRouterProvider.otherwise('/tab/decks');
+    .state('deckDetails', {
+        url: '/decks/:id',
+        templateUrl: 'templates/deckDetails.html',
+        controller: 'DecksCtrl'
+    })
+
+
+    $urlRouterProvider.otherwise('/decks');
 
 })

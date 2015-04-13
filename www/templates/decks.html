@@ -2,9 +2,9 @@
     <ion-content padding="true">
         <h4>Tap a deck to see the cards</h4>
         <div ng-repeat="deck in decks" >
-            <button class="button button-large button-block button-royal">
-                {{ deck.name }}
-            </button>
+            <a class="button button-large button-block button-royal" href="#/decks/{{deck.id}}" >
+                {{ deck.title }}
+            </a>
         </div>
     </ion-content>
 </ion-view>

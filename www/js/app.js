@@ -39,6 +39,12 @@ angular.module('plan-poker', ['ionic', 'plan-poker.controllers'])
         controller: 'DecksCtrl'
     })
 
+    .state('card', {
+        url: '/card/:id',
+        templateUrl: 'templates/card.html',
+        controller: 'DecksCtrl'
+    })
+
 
     $urlRouterProvider.otherwise('/decks');
 
